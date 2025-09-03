@@ -17,6 +17,35 @@
   display: block;   
 }
 </style>
+
+  <style>
+.hero-section {
+  display: flex;           
+  flex-wrap: wrap;         
+  gap: 20px;               
+  align-items: flex-start; 
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  width: 215px;      
+  height: auto;     
+  display: block;   
+}
+
+.hero-video {
+  width: 360px;
+  height: 215px;
+}
+
+@media (max-width: 700px) {
+  .hero-image, .hero-video {
+    flex: 1 1 100%; 
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
   
 </head>
 
@@ -29,6 +58,18 @@
   <img src="photo1.png" alt="風和里の建物の写真" class="hero-image">
 <br>
 <hr>
+
+  <section class="hero-section">
+    <img src="photo1.png" alt="風和里の建物の写真" class="hero-image">
+    <iframe class="hero-video" 
+            src="https://youtube.com/embed/lWz15dVWNfA" 
+            title="風和里の内部に潜入" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+  </section>
+  
   <section>
   <h2>お問い合わせ先</h2>
   <p>電話番号：090-5252-8115</p>
