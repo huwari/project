@@ -9,9 +9,13 @@
 </head>
 
 <body>
+  <header>
   <h1>その他の情報</h1>
 <p><a href="index.html">TOP</a></p>
+  </header>
 
+
+  <main>
   <h2>風和里の魅力</h2>
   <ul>
   <li>築80年以上の歴史</li>
@@ -44,8 +48,84 @@
 
     <tr><td>鳥の鳴き声</td>
     <td>有り</td></tr>
+
+<tr><td>蛇の出現</td>
+<td>夜中などに出現する時があるので、夜中は特に注意して！
+</td></tr>
+
+
+
+    
   </table>
   </section>
+  </main>
+
+  
+
+  <aside>
+    <h3>入力フォーム</h3>
+    <p>*これは練習用に作ったフォームで、サーバーなどは構築していないため、"送信"しても実際に送信されません</p>
+
+
+    <form action="#" method="post">
+
+      <p>
+      <label for="username">お名前: (必須)</label>
+<input type="text" id="username" name="username" required>
+      </p>
+
+      <p>
+<label for="email">メールアドレス: (必須)</label>
+        <input type="email" id="email" name="email" required>
+
+        
+      </p>
+
+      <fieldset>
+        <legend>性別</legend>
+        <label><input type="radio" name="gender" value="male">男性</label>
+        <label><input type="radio" name="gender" value="female">女性</label>
+        <label><input type="radio" name="gender" value="other">その他</label>
+      </fieldset>
+
+
+      <p>
+        <label for="message">お問い合わせ</label>
+        <textarea id="message" name="message" rows="5" cols="50"></textarea>
+      </p>
+
+          <p>
+            <button type="submit">送信</button>
+
+          </p>
+    </form>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+        
+  </aside>
 
   
 
