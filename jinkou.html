@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和束町の人口推移</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Hiragino Sans", "Helvetica Neue", Arial, sans-serif;
+            background: #f5f0eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px 25px 35px;
+            max-width: 780px;
+            width: 100%;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e8e0d8;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #3a2c24;
+            text-align: center;
+            letter-spacing: 2px;
+            padding-bottom: 6px;
+            border-bottom: 3px solid #b8a89a;
+            margin-bottom: 20px;
+        }
+
+        .sub {
+            text-align: center;
+            font-size: 14px;
+            color: #7a6a5a;
+            margin-bottom: 18px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        thead th {
+            background: #d6cbc2;
+            color: #2d241e;
+            font-weight: 700;
+            padding: 12px 10px;
+            text-align: center;
+            border-bottom: 2px solid #b8a89a;
+        }
+
+        tbody td {
+            padding: 11px 10px;
+            text-align: center;
+            border-bottom: 1px solid #eae2da;
+            color: #2d241e;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* ピーク行（1985年）を強調 */
+        .peak {
+            background: #fcf6ed;
+            font-weight: 700;
+            color: #5a3f2b;
+        }
+        .peak td:first-child {
+            position: relative;
+        }
+        .peak td:first-child::after {
+            content: "▲ ピーク";
+            font-size: 11px;
+            font-weight: 600;
+            color: #b0653a;
+            margin-left: 8px;
+            background: #f0e4d8;
+            padding: 0 8px;
+            border-radius: 20px;
+        }
+
+        /* 減少傾向がわかるように、右端に矢印アイコン */
+        .down {
+            color: #9f7b64;
+            font-size: 13px;
+        }
+
+        /* フッター的な注釈 */
+        .note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #7a6a5a;
+            background: #f8f3ef;
+            padding: 14px 18px;
+            border-radius: 10px;
+            border-left: 4px solid #b8a89a;
+            line-height: 1.6;
+        }
+
+        .note strong {
+            color: #4d382a;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 500px) {
+            .container {
+                padding: 18px 12px 22px;
+            }
+            table {
+                font-size: 13px;
+            }
+            thead th,
+            tbody td {
+                padding: 8px 5px;
+            }
+            h1 {
+                font-size: 18px;
+            }
+            .peak td:first-child::after {
+                content: "▲";
+                font-size: 13px;
+                margin-left: 4px;
+                background: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>和束町の人口推移</h1>
+        <p class="sub">京都府 和束町（わづかちょう）</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>西暦</th>
+                    <th>人口（人）</th>
+                    <th>前回比</th>
+                    <th>備考</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="peak">
+                    <td>1985年</td>
+                    <td>6,333</td>
+                    <td>—</td>
+                    <td>ピーク</td>
+                </tr>
+                <tr>
+                    <td>2000年</td>
+                    <td>5,457</td>
+                    <td class="down">▼ 13.8%</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2005年</td>
+                    <td>4,998</td>
+                    <td class="down">▼ 8.4%</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2010年</td>
+                    <td>4,482</td>
+                    <td class="down">▼ 10.3%</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2015年</td>
+                    <td>3,956</td>
+                    <td class="down">▼ 11.7%</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2020年</td>
+                    <td>3,478</td>
+                    <td class="down">▼ 12.1%</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2025年（速報）</td>
+                    <td>2,977</td>
+                    <td class="down">▼ 14.4%</td>
+                    <td>国勢調査速報</td>
+                </tr>
+                <tr>
+                    <td>2050年（予測）</td>
+                    <td>1,306</td>
+                    <td class="down">▼ 56.1%</td>
+                    <td>将来推計</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note">
+            <strong>📌 ポイント</strong><br>
+            • 1985年の <strong>6,333人</strong> をピークに、その後は一貫して減少が続いています。<br>
+            • 2025年速報値では <strong>2,977人</strong> で、前回比 <strong>14.4%減</strong> と減少ペースが加速しています。<br>
+            • 2050年にはピーク時の約 <strong>38%</strong> にあたる <strong>1,306人</strong> まで減少すると予測されています。<br>
+            • 少子高齢化と若年層の流出が主な要因です。
+        </div>
+    </div>
+</body>
+</html>
